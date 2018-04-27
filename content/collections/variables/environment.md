@@ -14,3 +14,9 @@ This will be the value of `APP_ENV` in your `.env` file. If you haven't set that
 ``` .language-output
 production
 ```
+So if you wanted to use this to disable a tracking partial based on your environment, you might include
+```
+{{ if environment == 'production' }}
+    {{ partial:tracking }}
+{{ /if }}
+```
